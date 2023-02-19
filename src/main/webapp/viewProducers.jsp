@@ -46,12 +46,12 @@
 </form>
 
 <br>
-<form action = "/webapplication_war_exploded/producersAdditionalFunctions.html">
+<form action = "/producersAdditionalFunctions.html">
     <input type="submit"  value="Дополнительные функции"></span>
 </form>
 
 <br>
-<form action = "/webapplication_war_exploded/index.jsp">
+<form action = "/index.jsp">
     <input type="submit"  value="Вернуться"></span>
 </form>
 

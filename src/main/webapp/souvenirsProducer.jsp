@@ -9,15 +9,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Information about souvenirs produced in a given country</title>
+    <title>Information about souvenirs of a given producer</title>
 </head>
 <body>
 
-<h3>&nbsp&nbsp&nbsp&nbsp&nbspИнформация о сувенирах, произведенных в заданной стране</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbspИнформация о сувенирах заданного производителя</h3>
 
-<form action = "souvenirsCountry" method = "post">
-    Страна производителя&nbsp;
-    <input name="country" type="text" />
+<form action = "souvenirsProducer" method = "post">
+    Название производителя&nbsp;
+        <input name="nameOfProducer" type="text" />
     &nbsp&nbsp&nbsp<input type = "submit" value = "Найти">
 </form>
 
@@ -43,7 +43,7 @@
 </table>
 
 <br>
-<form action = "/webapplication_war_exploded/souvenirsAdditionalFunctions.html">
+<form action = "/souvenirsAdditionalFunctions.html">
     <input type="submit"  value="Вернуться к функциям"></span>
 </form>
 

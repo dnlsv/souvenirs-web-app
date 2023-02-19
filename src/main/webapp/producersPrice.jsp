@@ -5,17 +5,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Information about the manufacturers of a given souvenir produced in a given year</title>
+    <title>Information about manufacturers whose souvenir prices are less than the specified one</title>
 </head>
 <body>
 
-<h3>&nbsp&nbsp&nbsp&nbsp&nbspИнформация о производителях заданного сувенира, произведенного в заданном году</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbspИнформация о производителях, чьи цены на сувениры меньше заданной</h3>
 
-<form action = "producersNameAndDate" method = "post">
-    Название сувенира&nbsp;
-    <input name="name" type="text" />
-    Год выпуска сувенира&nbsp;
-    <input name="date" type="text" />
+<form action = "producersPrice" method = "post">
+    Цена сувенира&nbsp;
+    <input name="price" type="text" />
     &nbsp&nbsp&nbsp<input type = "submit" value = "Найти">
 </form>
 
@@ -37,7 +35,7 @@
 </table>
 
 <br>
-<form action = "/webapplication_war_exploded/producersAdditionalFunctions.html">
+<form action = "/producersAdditionalFunctions.html">
     <input type="submit"  value="Вернуться к функциям"></span>
 </form>
 

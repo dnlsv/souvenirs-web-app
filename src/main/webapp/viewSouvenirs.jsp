@@ -52,22 +52,22 @@
 </form>
 
 <br>
-<form action = "/webapplication_war_exploded/souvenirsAdditionalFunctions.html">
+<form action = "/souvenirsAdditionalFunctions.html">
     <input type="submit"  value="Дополнительные функции"></span>
 </form>
 
 <br>
-<form action = "/webapplication_war_exploded/index.jsp">
+<form action = "/index.jsp">
     <input type="submit"  value="Вернуться"></span>
 </form>
 
 <%--<br>
 <button type="submit"
-        onClick="location.href='http://localhost:8080/webapplication_war_exploded/index.jsp'">
+        onClick="location.href='http://localhost:8080/index.jsp'">
     Дополнительные функции</button>
 
 <button type="submit"
-        onClick="location.href='http://localhost:8080/webapplication_war_exploded/index.jsp'">
+        onClick="location.href='http://localhost:8080/index.jsp'">
     Вернуться</button>--%>
 
 </body>
