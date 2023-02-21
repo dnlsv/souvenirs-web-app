@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    private final String URL = "jdbc:mysql://localhost:3306/javadatabase?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    private final String URL = "jdbc:mysql://localhost:3306/souvenirstore?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private final String USERNAME = "root";
     private final String PASSWORD = "root";
 
