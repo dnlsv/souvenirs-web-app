@@ -18,7 +18,7 @@ public class ProducersNameAndDateServlet extends HttpServlet {
     private String date;
 
     @Override
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
 
         name = request.getParameter("name");
@@ -30,7 +30,7 @@ public class ProducersNameAndDateServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         SearchFromDatabase search = new SearchFromDatabase();
         HashSet<Integer> arrayDetails = search.SearchNameAndDateFromDatabase(name, date);
         search.SearchProducersFromDatabase(arrayDetails);

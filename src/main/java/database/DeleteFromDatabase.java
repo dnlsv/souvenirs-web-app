@@ -7,12 +7,12 @@ public class DeleteFromDatabase {
     DatabaseStatement databaseStatement;
     private Statement statement;
 
-    public DeleteFromDatabase(){
+    public DeleteFromDatabase() {
         databaseStatement = new DatabaseStatement();
         statement = databaseStatement.getDatabaseStatement();
     }
 
-    public void DeleteSouvenirToDatabase(int id){
+    public void DeleteSouvenirToDatabase(int id) {
         String str = "delete from souvenirs where souvenirID = " + id + ";";
 
         try {
@@ -22,7 +22,7 @@ public class DeleteFromDatabase {
         }
     }
 
-    public void DeleteProducerToDatabase(int id){
+    public void DeleteProducerToDatabase(int id) {
         String str = "delete from producers where producerID = " + id + ";";
 
         try {

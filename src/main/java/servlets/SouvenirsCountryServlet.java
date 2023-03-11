@@ -16,7 +16,7 @@ public class SouvenirsCountryServlet extends HttpServlet {
     private String country;
 
     @Override
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
 
         country = request.getParameter("country");
@@ -27,7 +27,7 @@ public class SouvenirsCountryServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         SearchFromDatabase search = new SearchFromDatabase();
         ArrayList<Integer> arrayId = search.SearchCountryFromDatabase(country);
         search.SearchSouvenirsFromDatabase(arrayId);

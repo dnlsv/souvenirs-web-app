@@ -8,14 +8,14 @@ public class AddToDatabase {
     DatabaseStatement databaseStatement;
     private Statement statement;
 
-    public AddToDatabase(){
+    public AddToDatabase() {
         databaseStatement = new DatabaseStatement();
         statement = databaseStatement.getDatabaseStatement();
     }
 
-    public void AddSouvenirToDatabase(String name, String details, String date, String price){
+    public void AddSouvenirToDatabase(String name, String details, String date, String price) {
         String str = "insert into souvenirs (name, producerDetails, releaseDate, price) values ('"
-                + name +"','" + details + "','" + date + "','" + price + "');";
+                + name + "','" + details + "','" + date + "','" + price + "');";
 
         try {
             statement.execute(str);
@@ -24,9 +24,9 @@ public class AddToDatabase {
         }
     }
 
-    public void AddProducerToDatabase(String name, String country){
+    public void AddProducerToDatabase(String name, String country) {
         String str = "insert into producers (name, country) values ('"
-                + name +"','" + country + "');";
+                + name + "','" + country + "');";
 
         try {
             statement.execute(str);

@@ -11,23 +11,23 @@ import java.util.HashSet;
 
 public class SearchFromDatabase {
     DatabaseStatement databaseStatement;
-    private Statement statement;
-    private ResultSet resultSet;
     ArrayList<Souvenir> souvenirArrayList = new ArrayList<Souvenir>();
     ArrayList<Producer> producerArrayList = new ArrayList<Producer>();
+    private Statement statement;
+    private ResultSet resultSet;
 
-    public SearchFromDatabase(){
+    public SearchFromDatabase() {
         databaseStatement = new DatabaseStatement();
         statement = databaseStatement.getDatabaseStatement();
     }
 
-    public ArrayList<Integer> SearchProducerNameFromDatabase(String producerName){
+    public ArrayList<Integer> SearchProducerNameFromDatabase(String producerName) {
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        String producerQuery = "select producerID from producers where name = '" + producerName +"';";
+        String producerQuery = "select producerID from producers where name = '" + producerName + "';";
         int id = 0;
         try {
             resultSet = statement.executeQuery(producerQuery);
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 id = resultSet.getInt(1);
                 arrayList.add(id);
             }
@@ -37,13 +37,13 @@ public class SearchFromDatabase {
         return arrayList;
     }
 
-    public ArrayList<Integer> SearchCountryFromDatabase(String country){
+    public ArrayList<Integer> SearchCountryFromDatabase(String country) {
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        String producerQuery = "select producerID from producers where country = '" + country +"';";
+        String producerQuery = "select producerID from producers where country = '" + country + "';";
         int id = 0;
         try {
             resultSet = statement.executeQuery(producerQuery);
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 id = resultSet.getInt(1);
                 arrayList.add(id);
             }
@@ -77,18 +77,18 @@ public class SearchFromDatabase {
         }
     }
 
-    public ArrayList<Souvenir> getSouvenirArrayList(){
+    public ArrayList<Souvenir> getSouvenirArrayList() {
         return souvenirArrayList;
     }
 
-    public HashSet<Integer> SearchPriceFromDatabase(int price){
+    public HashSet<Integer> SearchPriceFromDatabase(int price) {
         //ArrayList<Integer> arrayList = new ArrayList<Integer>();
         HashSet<Integer> hashSet = new HashSet<Integer>();
         String souvenirQuery = "select producerDetails from souvenirs where price < " + price + ";";
         int details = 0;
         try {
             resultSet = statement.executeQuery(souvenirQuery);
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 details = resultSet.getInt(1);
                 hashSet.add(details);
             }
@@ -98,13 +98,13 @@ public class SearchFromDatabase {
         return hashSet;
     }
 
-    public HashSet<Integer> SearchNameAndDateFromDatabase(String name, String date){
+    public HashSet<Integer> SearchNameAndDateFromDatabase(String name, String date) {
         HashSet<Integer> hashSet = new HashSet<Integer>();
         String souvenirQuery = "select producerDetails from souvenirs where name = '" + name + "' and year(releaseDate) = '" + date + "';";
         int details = 0;
         try {
             resultSet = statement.executeQuery(souvenirQuery);
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 details = resultSet.getInt(1);
                 hashSet.add(details);
             }
@@ -136,7 +136,7 @@ public class SearchFromDatabase {
         }
     }
 
-    public ArrayList<Producer> getProducerArrayList(){
+    public ArrayList<Producer> getProducerArrayList() {
         return producerArrayList;
     }
 

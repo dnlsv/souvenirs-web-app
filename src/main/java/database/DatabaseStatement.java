@@ -8,7 +8,7 @@ public class DatabaseStatement {
     DatabaseConnection connection;
     private Statement statement;
 
-    public DatabaseStatement(){
+    public DatabaseStatement() {
         connection = new DatabaseConnection();
         try {
             statement = connection.getDatabaseConnecion().createStatement();
@@ -17,7 +17,7 @@ public class DatabaseStatement {
         }
     }
 
-    public Statement getDatabaseStatement(){
+    public Statement getDatabaseStatement() {
         return statement;
     }
 }

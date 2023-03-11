@@ -14,7 +14,7 @@ public class DeleteSouvenirServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("del");
-        if(action != null) {
+        if (action != null) {
             int id = Integer.parseInt(request.getParameter("id"));
             DeleteFromDatabase delete = new DeleteFromDatabase();
             delete.DeleteSouvenirToDatabase(id);

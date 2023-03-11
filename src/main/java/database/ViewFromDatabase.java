@@ -13,21 +13,21 @@ public class ViewFromDatabase {
     private final String souvenirQuery = "select * from souvenirs";
     private final String producerQuery = "select * from producers";
     DatabaseStatement databaseStatement;
-    private Statement statement;
-    private ResultSet resultSet;
     ArrayList<Souvenir> souvenirArrayList = new ArrayList<Souvenir>();
     ArrayList<Producer> producerArrayList = new ArrayList<Producer>();
+    private Statement statement;
+    private ResultSet resultSet;
 
-    public ViewFromDatabase(){
+    public ViewFromDatabase() {
         databaseStatement = new DatabaseStatement();
         statement = databaseStatement.getDatabaseStatement();
     }
 
-    public void ViewSouvenirsFromDatabase(){
+    public void ViewSouvenirsFromDatabase() {
         try {
             resultSet = statement.executeQuery(souvenirQuery);
 
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 Souvenir souvenir = new Souvenir();
                 souvenir.setId(resultSet.getInt(1));
                 souvenir.setName(resultSet.getString(2));
@@ -42,15 +42,15 @@ public class ViewFromDatabase {
         }
     }
 
-    public ArrayList<Souvenir> getSouvenirArrayList(){
+    public ArrayList<Souvenir> getSouvenirArrayList() {
         return souvenirArrayList;
     }
 
-    public void ViewProducersFromDatabase(){
+    public void ViewProducersFromDatabase() {
         try {
             resultSet = statement.executeQuery(producerQuery);
 
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 Producer producer = new Producer();
                 producer.setProducerId(resultSet.getInt(1));
                 producer.setProducerName(resultSet.getString(2));
@@ -63,7 +63,7 @@ public class ViewFromDatabase {
         }
     }
 
-    public ArrayList<Producer> getProducerArrayList(){
+    public ArrayList<Producer> getProducerArrayList() {
         return producerArrayList;
     }
 }

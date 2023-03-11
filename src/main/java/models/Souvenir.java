@@ -8,49 +8,50 @@ public class Souvenir {
     private String date;
     private int price;
 
-    public Souvenir(){}
-
-    public void setId(int _id){
-        this.id = _id;
+    public Souvenir() {
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public void setName(String _name){
-        this.name = _name;
+    public void setId(int _id) {
+        this.id = _id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setDetails(int _details){
-        this.details = _details;
+    public void setName(String _name) {
+        this.name = _name;
     }
 
-    public int getDetails(){
+    public int getDetails() {
         return details;
     }
 
-    public void setDate(String _date){
-        this.date = _date;
+    public void setDetails(int _details) {
+        this.details = _details;
     }
 
-    public String getDate(){
+    public String getDate() {
         return date;
     }
 
-    public void setPrice(int _price){
-        this.price = _price;
+    public void setDate(String _date) {
+        this.date = _date;
     }
 
-    public int getPrice(){
+    public int getPrice() {
         return price;
     }
 
-    public String toString(){
+    public void setPrice(int _price) {
+        this.price = _price;
+    }
+
+    public String toString() {
         String str = getId() + getName() + getDetails() + getDate() + getPrice();
         return str;
     }

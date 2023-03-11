@@ -6,33 +6,34 @@ public class Producer {
     private String producerName;
     private String producerCountry;
 
-    public Producer(){}
-
-    public void setProducerId(int _id){
-        this.producerId = _id;
+    public Producer() {
     }
 
-    public int getProducerId(){
+    public int getProducerId() {
         return producerId;
     }
 
-    public void setProducerName(String _name){
-        this.producerName = _name;
+    public void setProducerId(int _id) {
+        this.producerId = _id;
     }
 
-    public String getProducerName(){
+    public String getProducerName() {
         return producerName;
     }
 
-    public void setProducerCountry(String _country){
-        this.producerCountry = _country;
+    public void setProducerName(String _name) {
+        this.producerName = _name;
     }
 
-    public String getProducerCountry(){
+    public String getProducerCountry() {
         return producerCountry;
     }
 
-    public String toString(){
+    public void setProducerCountry(String _country) {
+        this.producerCountry = _country;
+    }
+
+    public String toString() {
         String str = getProducerId() + getProducerName() + getProducerCountry();
         return str;
     }

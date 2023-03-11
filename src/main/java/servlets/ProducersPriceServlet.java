@@ -17,7 +17,7 @@ public class ProducersPriceServlet extends HttpServlet {
     private int price;
 
     @Override
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
 
         price = Integer.parseInt(request.getParameter("price"));
@@ -28,7 +28,7 @@ public class ProducersPriceServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         SearchFromDatabase search = new SearchFromDatabase();
         HashSet<Integer> arrayDetails = search.SearchPriceFromDatabase(price);
         search.SearchProducersFromDatabase(arrayDetails);

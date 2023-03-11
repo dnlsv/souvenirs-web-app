@@ -7,16 +7,16 @@ public class EditFromDatabase {
     DatabaseStatement databaseStatement;
     private Statement statement;
 
-    public EditFromDatabase(){
+    public EditFromDatabase() {
         databaseStatement = new DatabaseStatement();
         statement = databaseStatement.getDatabaseStatement();
     }
 
-    public void EditSouvenirToDatabase(int id ,String name, String details, String date, int price){
+    public void EditSouvenirToDatabase(int id, String name, String details, String date, int price) {
         String str = "update souvenirs set name = '" + name
                 + "', producerDetails = '" + details
-                + "', releaseDate = '"+ date
-                +"', price = " + price + " where souvenirID = " + id + ";";
+                + "', releaseDate = '" + date
+                + "', price = " + price + " where souvenirID = " + id + ";";
 
         try {
             statement.execute(str);
@@ -25,7 +25,7 @@ public class EditFromDatabase {
         }
     }
 
-    public void EditProducerToDatabase(int id ,String name, String country){
+    public void EditProducerToDatabase(int id, String name, String country) {
         String str = "update producers set name = '" + name
                 + "', country = '" + country
                 + "' where producerID = " + id + ";";

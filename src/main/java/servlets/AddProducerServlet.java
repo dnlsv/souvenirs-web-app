@@ -12,7 +12,7 @@ import java.io.IOException;
 public class AddProducerServlet extends HttpServlet {
 
     @Override
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
 
         String name = request.getParameter("nameOfProducer");
@@ -26,7 +26,7 @@ public class AddProducerServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("addProducer.jsp");
         requestDispatcher.forward(request, response);
     }
